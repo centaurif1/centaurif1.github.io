@@ -1,0 +1,124 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts\Montserrat-VariableFont_wght.ttf");
+}
+
+:root {
+    --navbar-bg: #222222;
+    --body-bg: #2b2b2b;
+    --text-color: #fff;
+    --link-color: #6c63ff;
+    --link-hover-color: #5a52d5;
+    --scroll-amt: -100%;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    font-family: "Montserrat";
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: var(--link-hover-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
+}
+
+.content-section {
+    background-color: #606060c2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header {
+    background-color: #000;
+    text-align: center;
+    font-size: 70pt;
+    padding: 0.5em;
+    line-height: 1em;
+}
+
+.accent {
+    padding: 0.5em;
+}
+
+.accent1 {
+    background-color: #3abef9
+}
+
+.accent2 {
+    background-color: #3572ef
+}
+
+.accent3 {
+    background-color: #050c9c
+}
+
+#navbar {
+    transition: transform 0.3s ease-in-out;
+    
+}
+#navbar.not-sticky-top {
+    transform: translateY(var(--scroll-amt));
+}
+footer {
+    background-color: #141414;
+    color: #e0e0e0;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer h5 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.social-icons {
+    font-size: 1.5rem;
+}
+
+.social-icons a {
+    margin-right: 1rem;
+}
+
+.container {
+    
+}
