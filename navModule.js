@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     navbar.addEventListener("mouseover", () => {
         hovering = true;
         viewNav();
-  d  })
+    })
 
     navbar.addEventListener("mouseleave", () => {
         hovering = false;
@@ -39,4 +39,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
     });
+
+    const popInElements = document.querySelectorAll('.pop-in');
+    
+            const options = {
+                root: null, // use the viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'popIn 0.5s ease forwards'; // Play animation
+                        observer.unobserve(entry.target); // Stop observing the element
+                    }
+                });
+            }, options);
+    
+            popInElements.forEach(el => {
+                observer.observe(el); // Start observing each element
+            });
 });

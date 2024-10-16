@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centauri Racing - Innovating F1 in Schools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@4.1.17/dist/framer-motion.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #3abef9;
+            --secondary-color: #3572ef;
+            --accent-color: #050c9c;
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff; /* Change to white */
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+    background-color: rgba(255, 0, 0, 0.5); /* Temporary red for visibility */
+}
+
+.section {
+    background-color: rgba(0, 255, 0, 0.5); /* Temporary green for visibility */
+}
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .car-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .car-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .car-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .car-details {
+            flex: 1;
+        }
+
+        .car-details h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .car-details ul {
+            list-style-type: none;
+        }
+
+        .car-details li {
+            margin-bottom: 0.5rem;
+        }
+
+        .car-details li i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .car-showcase {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const initApp = () => {
+            const { useState, useEffect } = React;
+            const framerMotion = window.framerMotion; // Access the global framerMotion
+            const { motion, useViewportScroll, useTransform } = framerMotion; // Destructure from it
+
+            const Navbar = () => {
+                const [isScrolled, setIsScrolled] = useState(false);
+
+                useEffect(() => {
+                    const handleScroll = () => {
+                        setIsScrolled(window.scrollY > 50);
+                    };
+                    window.addEventListener('scroll', handleScroll);
+                    return () => window.removeEventListener('scroll', handleScroll);
+                }, []);
+
+                return (
+                    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+                        <div className="container navbar-content">
+                            <div className="logo">Centauri Racing</div>
+                            <div className="nav-links">
+                                <a href="#home">Home</a>
+                                <a href="#features">Features</a>
+                                <a href="#showcase">Showcase</a>
+                                <a href="#contact">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                );
+            };
+
+        const Hero = () => (
+            <motion.section 
+                className="hero" 
+                id="home"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <div className="container hero-content">
+                    <motion.h1
+                        initial={{ y: -50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                    >
+                        Centauri Racing
+                    </motion.h1>
+                    <motion.p
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                    >
+                        Pushing the boundaries of innovation in F1 for Schools
+                    </motion.p>
+                    <motion.a 
+                        href="#contact" 
+                        className="cta-button"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        Join Our Team
+                    </motion.a>
+                </div>
+            </motion.section>
+        );
+
+        const Feature = ({ icon, title, description }) => (
+            <motion.div 
+                className="feature"
+                whileHover={{ scale: 1.05 }}
+            >
+                <i className={`fas ${icon}`}></i>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </motion.div>
+        );
+
+        const Features = () => (
+            <section className="section" id="features">
+                <div className="container">
+                    <h2 className="section-title">Why Choose Us</h2>
+                    <div className="features">
+                        <Feature 
+                            icon="fa-rocket" 
+                            title="Innovation" 
+                            description="Cutting-edge designs pushing the limits of aerodynamics and efficiency."
+                        />
+                        <Feature 
+                            icon="fa-users" 
+                            title="Teamwork" 
+                            description="Collaborative efforts driving our success in every competition."
+                        />
+                        <Feature 
+                            icon="fa-tachometer-alt" 
+                            title="Speed" 
+                            description="Optimized for unparalleled velocity on the track."
+                        />
+                        <Feature 
+                            icon="fa-lightbulb" 
+                            title="Creativity" 
+                            description="Innovative solutions to complex engineering challenges."
+                        />
+                    </div>
+                </div>
+            </section>
+        );
+
+        const CarShowcase = () => {
+            const { scrollYProgress } = useViewportScroll();
+            const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
+            return (
+                <section className="section" id="showcase">
+                    <div className="container">
+                        <h2 className="section-title">Our Latest Model</h2>
+                        <div className="car-showcase">
+                            <motion.div 
+                                className="car-image"
+                                style={{ scale }}
+                            >
+                                <img src="./media/car.png" alt="Centauri Racing Car" />
+                            </motion.div>
+                            <div className="car-details">
+                                <h3>Centauri X1</h3>
+                                <ul>
+                                    <li><i className="fas fa-wind"></i> Advanced Aerodynamics</li>
+                                    <li><i className="fas fa-tachometer-alt"></i> Top Speed: 120 km/h</li>
+                                    <li><i className="fas fa-weight-hanging"></i> Weight: 50g</li>
+                                    <li><i className="fas fa-cogs"></i> Custom-designed chassis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        const Footer = () => (
+            <footer id="contact">
+                <div className="container">
+                    <div className="social-links">
+                        <a href="#"><i className="fab fa-facebook"></i></a>
+                        <a href="#"><i className="fab fa-twitter"></i></a>
+                        <a href="#"><i className="fab fa-instagram"></i></a>
+                        <a href="#"><i className="fab fa-youtube"></i></a>
+                    </div>
+                    <p>&copy; 2024 Centauri Racing. All rights reserved.</p>
+                </div>
+            </footer>
+        );
+
+        const App = () => (
+                <div>
+                    <Navbar />
+                    <Hero />
+                    <Features />
+                    <CarShowcase />
+                    <Footer />
+                </div>
+            );
+
+            ReactDOM.render(<App />, document.getElementById('root'));
+        };
+
+        // Wait for framer-motion to load
+        const checkFramerMotion = setInterval(() => {
+            if (window.framerMotion) {
+                clearInterval(checkFramerMotion);
+                initApp();
+            }
+        }, 100); // Check every 100 ms
+    </script>
+</body>
+</html>
