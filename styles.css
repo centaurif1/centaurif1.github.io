@@ -1,7 +1,6 @@
-@font-face {
-    font-family: "Montserrat";
-    src: url("fonts\Montserrat-VariableFont_wght.ttf");
-}
+/*@font-face {
+    font-family: "Montserrat", sans-serif;
+}*/
 
 :root {
     --navbar-bg: #222222;
@@ -22,6 +21,7 @@ body {
     background-color: var(--navbar-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    font-family: "Montserrat";
 }
 
 .navbar-brand, .nav-link {
@@ -247,4 +247,40 @@ footer a:hover {
 
 .nav-link:hover {
     transform: scale(1.05);
+}
+
+.parallax {
+    background-image: url('path-to-your-header-image.jpg'); /* Replace with your image URL */
+    min-height: 500px; /* Adjust height as needed */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header b {
+    position: relative;
+    z-index: 2; /* Ensures text appears above the background */
+    color: white;
+    font-size: 70pt;
+    text-align: center;
+    padding: 0.5em;
+    line-height: 1em;
+    opacity: 0;
+    animation: wipe 1s ease-out forwards, fadeIn 0.5s ease forwards;
+    animation-delay: 0.9s;
+}
+
+.accent {
+    z-index: 1;
+}
+
+/* Parallax background scrolling effect */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Disable parallax on mobile for performance */
+    }
 }
