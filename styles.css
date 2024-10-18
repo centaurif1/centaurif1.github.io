@@ -21,7 +21,6 @@ body {
     background-color: var(--navbar-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    font-family: "Montserrat";
 }
 
 .navbar-brand, .nav-link {
@@ -68,14 +67,42 @@ img.img-fluid:hover {
 }
 
 .main-header {
+    height: 35vh; /* Full viewport height */
     background-color: #000;
-    text-align: center;
-    font-size: 70pt;
+    font-size: 10vw;
     padding: 0.5em;
     line-height: 1em;
     opacity: 0;
+    display: flex;
     animation: wipe 1s ease-out forwards, fadeIn 0.5s ease forwards;
     animation-delay: 0.9s;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.main-header b {
+    font-size: 10vw; /* Scale the text based on viewport width */
+    line-height: 1.2em;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: wipe 1s ease-out forwards, fadeIn 0.5s ease forwards;
+    animation-delay: 0.9s;
+
+}
+
+@media (max-width: 768px) {
+    .main-header b {
+        font-size: 12vw; /* Slightly larger on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-header b {
+        font-size: 14vw; /* Larger font for smaller screens */
+    }
 }
 
 .accent {
