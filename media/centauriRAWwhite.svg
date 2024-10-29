@@ -26,7 +26,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.61543465"
+     inkscape:zoom="0.59443747"
      inkscape:cx="-78.022007"
      inkscape:cy="449.95407"
      inkscape:document-units="mm"
@@ -87,8 +87,7 @@
          transform="matrix(0.26458333,0,0,0.26458333,-57.251191,-14.929138)" />
     </g>
     <g
-       aria-label="CENTAURI
-RACING"
+       aria-label="CENTAURI RACING"
        transform="scale(0.98368819,1.0165823)"
        id="text839"
        style="font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;font-size:42.1901px;line-height:0.72;font-family:Montserrat;-inkscape-font-specification:'Montserrat, @wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 700;text-align:center;letter-spacing:-1.48034px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583">
@@ -149,14 +148,5 @@ RACING"
          style="stroke-width:0.264583"
          id="path865" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86894px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:'Montserrat, @wght=286';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 286;letter-spacing:3.0865px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.264583;stroke-opacity:1"
-       id="text949"
-       transform="matrix(0.9836799,0.00416955,-0.00403464,1.0165738,0,0)"
-       x="34.679695"
-       y="179.55795"><tspan
-         id="tspan947"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.86894px;font-family:Montserrat;-inkscape-font-specification:'Montserrat, @wght=286';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 286;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.264583;stroke-opacity:1">FORMULA ONE TEAM</tspan></text>
   </g>
 </svg>
