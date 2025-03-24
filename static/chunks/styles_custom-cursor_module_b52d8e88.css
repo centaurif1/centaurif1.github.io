@@ -1,0 +1,59 @@
+/* [project]/styles/custom-cursor.module.css [app-client] (css) */
+.custom-cursor-module__vumlCW__cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #007bff80;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width .15s, height .15s, border .15s;
+}
+
+.custom-cursor-module__vumlCW__cursorDot {
+  width: 8px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.custom-cursor-module__vumlCW__cursor.custom-cursor-module__vumlCW__clicked {
+  width: 36px;
+  height: 36px;
+  background-color: #007bff1a;
+}
+
+.custom-cursor-module__vumlCW__cursorDot.custom-cursor-module__vumlCW__clicked {
+  transform: translate(-50%, -50%)scale(.75);
+  background-color: var(--secondary-color);
+  transition: background-color .2s, transform .2s;
+}
+
+.custom-cursor-module__vumlCW__cursor.custom-cursor-module__vumlCW__hidden, .custom-cursor-module__vumlCW__cursorDot.custom-cursor-module__vumlCW__hidden {
+  opacity: 0;
+}
+
+.custom-cursor-module__vumlCW__cursor.custom-cursor-module__vumlCW__linkHovered {
+  width: 60px;
+  height: 60px;
+  background-color: #007bff1a;
+}
+
+.custom-cursor-module__vumlCW__cursorDot.custom-cursor-module__vumlCW__linkHovered {
+  background-color: #007bff4d;
+  transform: translate(-50%, -50%)scale(1.2);
+  transition: background-color .2s, transform .2s;
+}
+
+@media (width <= 768px) {
+  .custom-cursor-module__vumlCW__cursor, .custom-cursor-module__vumlCW__cursorDot {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles_custom-cursor_module_b52d8e88.css.map*/

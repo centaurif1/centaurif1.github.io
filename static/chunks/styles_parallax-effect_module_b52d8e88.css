@@ -1,0 +1,12 @@
+/* [project]/styles/parallax-effect.module.css [app-client] (css) */
+.parallax-effect-module__83nh9q__parallaxContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-effect-module__83nh9q__parallaxContent {
+  position: relative;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=styles_parallax-effect_module_b52d8e88.css.map*/

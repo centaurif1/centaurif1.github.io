@@ -1,0 +1,434 @@
+/* [project]/styles/team-page.module.css [app-client] (css) */
+.team-page-module__JbdokG__teamPage {
+  background: rgba(var(--dark-bg-rgb), .9);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.team-page-module__JbdokG__heroSection {
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#050c9c4d, #0a0a1400);
+}
+
+.team-page-module__JbdokG__heroSection:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #007bff1a 0%, #0000 70%);
+  z-index: 0;
+}
+
+.team-page-module__JbdokG__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.team-page-module__JbdokG__pageTitle {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--light-blue), var(--vibrant-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-page-module__JbdokG__pageSubtitle {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-page-module__JbdokG__teamSection {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.team-page-module__JbdokG__teamGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.team-page-module__JbdokG__teamCard {
+  background: #1e1e3c33;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1a;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  cursor: pointer;
+}
+
+.team-page-module__JbdokG__teamCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #0003;
+}
+
+.team-page-module__JbdokG__memberImageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.team-page-module__JbdokG__memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.team-page-module__JbdokG__teamCard:hover .team-page-module__JbdokG__memberImage {
+  transform: scale(1.05);
+}
+
+.team-page-module__JbdokG__imageBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #0000;
+  border-image: linear-gradient(45deg, #007bff, #6cf) 1;
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+
+.team-page-module__JbdokG__teamCard:hover .team-page-module__JbdokG__imageBorder {
+  opacity: 1;
+}
+
+.team-page-module__JbdokG__memberInfo {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.team-page-module__JbdokG__memberInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: #fff;
+}
+
+.team-page-module__JbdokG__role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.team-page-module__JbdokG__memberBrief {
+  font-size: .95rem;
+  color: #ffffffb3;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.team-page-module__JbdokG__readMoreBtn {
+  display: inline-block;
+  padding: .5rem 1.2rem;
+  background: linear-gradient(45deg, #007bff33, #6cf3);
+  border: 1px solid #007bff4d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.team-page-module__JbdokG__readMoreBtn:hover {
+  background: linear-gradient(45deg, #007bff66, #6cf6);
+  transform: translateY(-3px);
+}
+
+.team-page-module__JbdokG__teamValues {
+  padding: 5rem 0;
+  background: linear-gradient(#050c9c1a, #0a0a1400);
+}
+
+.team-page-module__JbdokG__sectionTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--light-blue), var(--vibrant-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-page-module__JbdokG__valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.team-page-module__JbdokG__valueCard {
+  background: #1e1e3c33;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1a;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.team-page-module__JbdokG__valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px #0003;
+}
+
+.team-page-module__JbdokG__valueIcon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.team-page-module__JbdokG__valueCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.team-page-module__JbdokG__valueCard p {
+  font-size: 1rem;
+  color: #ffffffb3;
+  line-height: 1.6;
+}
+
+.team-page-module__JbdokG__modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000c;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.team-page-module__JbdokG__modalContent {
+  background: #141428f2;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1a;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.team-page-module__JbdokG__closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #0000004d;
+  border: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+  z-index: 10;
+}
+
+.team-page-module__JbdokG__closeButton:hover {
+  background: #fff3;
+  transform: rotate(90deg);
+}
+
+.team-page-module__JbdokG__modalGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.team-page-module__JbdokG__modalImageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-page-module__JbdokG__modalImageContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.team-page-module__JbdokG__modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #007bff4d;
+}
+
+.team-page-module__JbdokG__modalImageBorder {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 2px solid #66ccff4d;
+  border-radius: 50%;
+  animation: 3s infinite alternate team-page-module__JbdokG__pulse;
+}
+
+.team-page-module__JbdokG__memberQuote {
+  background: #007bff1a;
+  border-left: 3px solid #007bff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+}
+
+.team-page-module__JbdokG__memberQuote i {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #007bff4d;
+  font-size: 1.5rem;
+}
+
+.team-page-module__JbdokG__memberQuote p {
+  font-style: italic;
+  color: #fffc;
+  padding-left: 2rem;
+}
+
+.team-page-module__JbdokG__skillsContainer {
+  width: 100%;
+}
+
+.team-page-module__JbdokG__skillsContainer h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.team-page-module__JbdokG__skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.team-page-module__JbdokG__skillTag {
+  background: linear-gradient(45deg, #007bff33, #6cf3);
+  border: 1px solid #007bff4d;
+  color: #fff;
+  padding: .3rem .8rem;
+  border-radius: 50px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.team-page-module__JbdokG__modalInfoSection h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+  color: #fff;
+}
+
+.team-page-module__JbdokG__modalRole {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.team-page-module__JbdokG__modalDescription {
+  color: #ffffffb3;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.team-page-module__JbdokG__modalDescription p {
+  margin-bottom: 1rem;
+}
+
+.team-page-module__JbdokG__modalSocial {
+  display: flex;
+  gap: 1rem;
+}
+
+.team-page-module__JbdokG__socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #007bff33;
+  border: 1px solid #007bff4d;
+  border-radius: 50%;
+  color: #fff;
+  transition: all .3s;
+}
+
+.team-page-module__JbdokG__socialIcon:hover {
+  background: #007bff;
+  transform: translateY(-3px);
+}
+
+@keyframes team-page-module__JbdokG__pulse {
+  0% {
+    box-shadow: 0 0 10px #007bff80;
+  }
+
+  100% {
+    box-shadow: 0 0 30px #007bffcc, 0 0 50px #66ccff80;
+  }
+}
+
+@media (width >= 768px) {
+  .team-page-module__JbdokG__teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-page-module__JbdokG__valuesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-page-module__JbdokG__modalGrid {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (width >= 992px) {
+  .team-page-module__JbdokG__teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/*# sourceMappingURL=styles_team-page_module_f885f893.css.map*/

@@ -1,0 +1,15 @@
+{
+  "app": {
+    "[project]/app/page": [
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2",
+      "static/media/c4mv1nF8G8_swA3J0R9rkoc-s.p.b44c64ad.woff2"
+    ],
+    "[project]/app/team/page": [
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2",
+      "static/media/c4mv1nF8G8_swA3J0R9rkoc-s.p.b44c64ad.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
